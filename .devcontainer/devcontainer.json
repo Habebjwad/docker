@@ -1,0 +1,17 @@
+{
+  "name": "Linux Desktop with RDP",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "settings": {
+    // (Optional) Add any VS Code settings here
+  },
+  "extensions": [
+    // (Optional) Include any VS Code extensions you need
+  ],
+  "forwardPorts": [
+    3389  // RDP default port
+  ],
+  "postCreateCommand": "sudo service xrdp start && sudo tailscale up --authkey=tskey-auth-kQ7f7jymh421CNTRL-dQ2aWwNPZ1jq4p9TBc2T1jrbWSKA24Pti",
+  "remoteUser": "vscode"
+}
